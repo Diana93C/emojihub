@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Emoji Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="emojihub-container">
+        <header class="emojihub-header">
+            <h1 class="emojihub-title">
+                Random Emoji Generator
+            </h1>
+        </header>
+
+        <main class="emojihub-main">
+            <div class="emojihub-action-section">
+                <button 
+                    id="emojihub-generate-btn" 
+                    class="emojihub-generate-btn"
+                >
+                    Generate Random Emoji
+                </button>
+            </div>
+
+            <div id="emojihub-loading" class="emojihub-loading" style="display: none;">
+                <div class="emojihub-spinner"></div>
+                <p>Loading...</p>
+            </div>
+
+            <div id="emojihub-error" class="emojihub-error" style="display: none;"></div>
+
+            <div id="emojihub-results" class="emojihub-results" style="display: none;">
+                <div class="emojihub-card">
+                    <div class="emojihub-card-header">
+                        <h2 id="emojihub-emoji-name" class="emojihub-emoji-name"></h2>
+                        <p id="emojihub-emoji-category" class="emojihub-emoji-category"></p>
+                    </div>
+                    <div class="emojihub-card-body">
+                        <div class="emojihub-main-info">
+                            <div id="emojihub-emoji" class="emojihub-emoji" title="Click to copy"></div>
+                            <p class="emojihub-copy-hint">Click emoji to copy</p>
+                        </div>
+                        <div class="emojihub-details">
+                            <div class="emojihub-detail-item">
+                                <div class="emojihub-detail-content">
+                                    <span class="emojihub-detail-label">Group</span>
+                                    <span id="emojihub-group" class="emojihub-detail-value"></span>
+                                </div>
+                            </div>
+                            <div class="emojihub-detail-item">
+                                <div class="emojihub-detail-content">
+                                    <span class="emojihub-detail-label">Unicode</span>
+                                    <span id="emojihub-unicode" class="emojihub-detail-value"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="emojihub-footer">
+            <p>Emoji data provided by <a href="https://emojihub.yurace.pro/" target="_blank">EmojiHub</a></p>
+        </footer>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
